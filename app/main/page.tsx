@@ -45,6 +45,20 @@ export default function Home() {
                 <h1 className={styles.h1}>
                     Member
                 </h1>
+                <Image
+                    className={styles.cham}
+                    src="ちゃむ2.svg"
+                    alt="ちゃむの画像"
+                    width={150}
+                    height={142}
+                />
+                <Image
+                    className={styles.button1}
+                    src="ちゃむボタン.svg"
+                    alt="ちゃむボタンの画像"
+                    width={142}
+                    height={35}
+                />
             </main>
         </div>
     );
