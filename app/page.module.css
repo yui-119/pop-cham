@@ -1,0 +1,54 @@
+.main {
+    display: flex;
+    flex-direction: column;  /* PCでもスマホでも縦並び */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    /* padding: 20px;  画面端の余白 */
+}
+
+.h1 {
+    position: absolute;
+    font-size: 2.5em;
+    color: var(--primary);
+    margin: 0; /* 余計なマージンを削除 */
+    top: 120px;
+}
+
+.h2 {
+    position: absolute;
+    font-size: 1em;
+    color: #595252;
+    top: 310px;
+}
+
+.h2 span {
+    display: block;
+    margin-bottom: 1.5em;
+}
+
+/* `.nikukyu` の幅を制限し、適切な位置に配置 */
+.nikukyu {
+    position: absolute; 
+    top: 50px;
+    left: 10px;
+}
+
+.nikukyu2 {
+    position: absolute; 
+    top: 700px;
+    right: 10px;
+}
+
+.start{
+    position: absolute;
+    top: 630px;
+}
+
+/* PCでもスマホでも縦並びを維持する */
+@media (min-width: 768px) {
+    .main {
+        flex-direction: column;  /* 横並びにしない */
+    }
+}
