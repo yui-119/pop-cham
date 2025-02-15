@@ -1,0 +1,35 @@
+.first {
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    padding: 80px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.aikon{
+    position: absolute;
+    left: 10px;
+}
+
+.name{
+    position: absolute;
+    font-size: 0.9em;
+    color: #FCF8ED;
+    left: 90px;
+    text-align: center;
+}
+
+.name span{
+    display: block;
+}
+
+.h1{
+    position: absolute;
+    top: 100px;
+    left: 20px;
+}
+
