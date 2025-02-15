@@ -71,11 +71,25 @@
     transform: translate(-110%, -50%); /* X軸: 60% 左に、Y軸: 50% 上に移動 */
 }
 
+.pop{
+    position: absolute;
+    top: 50%; /* 画面の中央（縦方向） */
+    left: 50%; /* 画面の中央（横方向） */
+    transform: translate(20%, -60%); /* X軸: 60% 左に、Y軸: 50% 上に移動 */
+}
+
 .button1{
     position: absolute;
     top: 50%; /* 画面の中央（縦方向） */
     left: 50%; /* 画面の中央（横方向） */
     transform: translate(-120%, 250%); /* X軸: 60% 左に、Y軸: 50% 上に移動 */
+}
+
+.button2{
+    position: absolute;
+    top: 50%; /* 画面の中央（縦方向） */
+    left: 50%; /* 画面の中央（横方向） */
+    transform: translate(20%, 250%); /* X軸: 60% 左に、Y軸: 50% 上に移動 */
 }
 
 /* PCでもスマホでも縦並びを維持する */
