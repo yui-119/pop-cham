@@ -42,59 +42,70 @@
 }
 
 .h1 {
-    font-size: 2.5em;
-    margin-top: 170px; /* 余白を減らして上に寄せる */
+    font-size: clamp(1.8em, 3vw, 2.5em); /* 画面サイズに応じて調整 */
+    margin-top: 150px; /* 少し余白を減らす */
 }
 
 .house {
     position: absolute;
-    bottom: 0px; /* 下部に配置 */
-    right: 0px;  /* 右端に配置 */
+    bottom: 0; /* 画面の高さを考慮して配置 */
+    right: 3vw;  /* 右端に寄せる */
+    width: clamp(200px, 30vw, 325px); /* 画面サイズに応じて調整 */
 }
 
-.tree{
+.tree {
     position: absolute;
-    top: 80px;
-    left: 0px;
+    top: 10vh; /* 余白を調整 */
+    left: 3vw;
+    width: clamp(100px, 15vw, 180px);
 }
 
-.honey{
+.honey {
     position: absolute;
-    top:140px;
-    right: 30px;
+    top: 15vh;
+    right: 5vw;
+    width: clamp(100px, 15vw, 180px);
 }
 
-.cham{
+.cham {
     position: absolute;
-    top: 50%; /* 画面の中央（縦方向） */
-    left: 50%; /* 画面の中央（横方向） */
-    transform: translate(-110%, -50%); /* X軸: 60% 左に、Y軸: 50% 上に移動 */
+    top: 50vh; /* 画面の中央（縦方向） */
+    left: 50%;
+    transform: translate(-110%, -50%);
+    width: clamp(150px, 20vw, 200px); /* サイズ調整 */
 }
 
-.pop{
+.pop {
     position: absolute;
-    top: 50%; /* 画面の中央（縦方向） */
-    left: 50%; /* 画面の中央（横方向） */
-    transform: translate(20%, -60%); /* X軸: 60% 左に、Y軸: 50% 上に移動 */
+    top: 50vh;
+    left: 50%;
+    transform: translate(20%, -60%);
+    width: clamp(150px, 20vw, 200px);
 }
 
-.button1{
+.button1 {
     position: absolute;
-    top: 50%; /* 画面の中央（縦方向） */
-    left: 50%; /* 画面の中央（横方向） */
-    transform: translate(-120%, 250%); /* X軸: 60% 左に、Y軸: 50% 上に移動 */
+    top: 70vh; /* 画面の中央より下に */
+    left: 50%;
+    transform: translate(-120%, -100%);
+    width: clamp(120px, 15vw, 160px);
 }
 
-.button2{
+.button2 {
     position: absolute;
-    top: 50%; /* 画面の中央（縦方向） */
-    left: 50%; /* 画面の中央（横方向） */
-    transform: translate(20%, 250%); /* X軸: 60% 左に、Y軸: 50% 上に移動 */
+    top: 70vh;
+    left: 50%;
+    transform: translate(20%, -100%);
+    width: clamp(120px, 15vw, 160px);
 }
 
-/* PCでもスマホでも縦並びを維持する */
-@media (min-width: 768px) {
-    .main {
-        flex-direction: column; /* 横並びにしない */
+@media (max-width: 767px) { /* スマホ用 */
+    .cham {
+        transform: translate(-90%, -50%); /* 左寄せを調整 */
+    }
+
+    .pop {
+        transform: translate(10%, -50%); /* 右寄せを調整 */
     }
 }
+
