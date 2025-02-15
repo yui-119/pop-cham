@@ -1,35 +1,72 @@
-.first {
+.all {
     display: flex;
-    align-items: center;
-}
-
-.main {
-    padding: 80px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.aikon{
-    position: absolute;
-    left: 10px;
-}
-
-.name{
-    position: absolute;
-    font-size: 0.9em;
-    color: #FCF8ED;
-    left: 90px;
+    flex-direction: column;  /* PCでもスマホでも縦並び */
+    justify-content: flex-start; /* 縦方向の中央から上に寄せる */
+    align-items: center;     /* 横方向の中央配置 */
+    min-height: 100vh;       /* 画面全体の高さを占める */
     text-align: center;
 }
 
-.name span{
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;  /* 縦に並べる */
+    justify-content: flex-start; /* 上に寄せる */
+    align-items: center;     /* 横方向の中央配置 */
+    min-height: 100vh;       /* 画面全体の高さを占める */
+    text-align: center;
+    padding-top: 50px;       /* 上部に余白を追加して調整 */
+}
+
+.aikon {
+    width: 60px; /* アイコンサイズを指定 */
+    height: 60px;
+}
+
+.name {
+    font-size: 0.9em;
+    color: #FCF8ED;
+    margin-top: 20px; /* 上部に少し余白を追加 */
+    text-align: center;
+}
+
+.name span {
     display: block;
 }
 
-.h1{
-    position: absolute;
-    top: 100px;
-    left: 20px;
+.h1 {
+    font-size: 2.5em;
+    margin-top: 170px; /* 余白を減らして上に寄せる */
 }
 
+.house {
+    position: absolute;
+    bottom: 0px; /* 下部に配置 */
+    right: 0px;  /* 右端に配置 */
+}
+
+.tree{
+    position: absolute;
+    top: 80px;
+    left: 0px;
+}
+
+.honey{
+    position: absolute;
+    top:140px;
+    right: 30px;
+}
+
+/* PCでもスマホでも縦並びを維持する */
+@media (min-width: 768px) {
+    .main {
+        flex-direction: column; /* 横並びにしない */
+    }
+}

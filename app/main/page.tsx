@@ -5,7 +5,7 @@ import Header from "@/app/components/Header";
 
 export default function Home() {
     return (
-        <div>
+        <div className={styles.all}>
             <Header>
                 <div className={styles.first}>
                     <Image
@@ -21,6 +21,27 @@ export default function Home() {
                 </div>
             </Header>
             <main className={styles.main} >
+                <Image
+                    className={styles.house}
+                    src="家アイコン.svg"
+                    alt="家アイコン画像"
+                    width={253}
+                    height={241}
+                />
+                <Image
+                    className={styles.tree}
+                    src="木のアイコン.svg"
+                    alt="木のアイコン画像"
+                    width={142}
+                    height={181}
+                />
+                <Image
+                    className={styles.honey}
+                    src="ミツバチ.svg"
+                    alt="ミツバチの画像"
+                    width={46}
+                    height={45}
+                />
                 <h1 className={styles.h1}>
                     Member
                 </h1>
