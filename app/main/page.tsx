@@ -2,6 +2,7 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import Header from "@/app/components/Header";
+import Link from 'next/link';
 
 export default function Home() {
     return (
@@ -52,13 +53,15 @@ export default function Home() {
                     width={150}
                     height={142}
                 />
-                <Image
-                    className={styles.button1}
-                    src="ちゃむボタン.svg"
-                    alt="ちゃむボタンの画像"
-                    width={142}
-                    height={35}
-                />
+                <Link href="/profile1">
+                    <Image
+                        className={styles.button1}
+                        src="ちゃむボタン.svg"
+                        alt="ちゃむボタンの画像"
+                        width={142}
+                        height={35}
+                    />
+                </Link>
                 <Image
                     className={styles.pop}
                     src="ぽっぷ.svg"
