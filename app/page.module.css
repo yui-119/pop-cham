@@ -3,14 +3,15 @@
     flex-direction: column;  /* PCでもスマホでも縦並び */
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     text-align: center;
     /* padding: 20px;  画面端の余白 */
+    overflow: hidden; /* はみ出し防止 */
 }
 
 .h1 {
     position: absolute;
-    font-size: 2.5em;
+    font-size: clamp(2em, 5vw, 2.5em);
     color: var(--primary);
     margin: 0; /* 余計なマージンを削除 */
     top: 120px;
@@ -18,7 +19,7 @@
 
 .h2 {
     position: absolute;
-    font-size: 1em;
+    font-size: clamp(0.8em, 3vw, 1em);
     color: #595252;
     top: 310px;
 }
@@ -26,6 +27,12 @@
 .h2 span {
     display: block;
     margin-bottom: 1.5em;
+}
+
+.start{
+    width: clamp(200px, 80%, 294px); /* 画面サイズに合わせる */
+    margin-top: auto; /* 自動調整で適切な位置に配置 */
+    margin-bottom: 5vh; /* 画面下部に適度なスペース */
 }
 
 /* `.nikukyu` の幅を制限し、適切な位置に配置 */
@@ -41,10 +48,12 @@
     right: 10px;
 }
 
-.start{
-    position: absolute;
-    top: 630px;
-}
+.image-link {
+    display: flex;
+    justify-content: center; /* 横方向の中央寄せ */
+    /* align-items: center; 縦方向の中央寄せ */
+    margin-top: 550px; /* 画像の位置を下げる */
+  }
 
 /* PCでもスマホでも縦並びを維持する */
 @media (min-width: 768px) {
