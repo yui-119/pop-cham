@@ -69,13 +69,15 @@ export default function Home() {
                     width={140}
                     height={161}
                 />
-                <Image
-                    className={styles.button2}
-                    src="ポップボタン.svg"
-                    alt="ポップボタンの画像"
-                    width={142}
-                    height={35}
-                />
+                <Link href="/profile2">
+                    <Image
+                        className={styles.button2}
+                        src="ポップボタン.svg"
+                        alt="ポップボタンの画像"
+                        width={142}
+                        height={35}
+                    />
+                </Link>
             </main>
         </div>
     );
