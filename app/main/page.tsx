@@ -48,10 +48,10 @@ export default function Home() {
                 </h1>
                 <Image
                     className={styles.cham}
-                    src="ちゃむ2.svg"
+                    src="/ちゃむ.gif"
                     alt="ちゃむの画像"
-                    width={150}
-                    height={142}
+                    width={250}
+                    height={250}
                 />
                 <Link href="/profile1">
                     <Image
