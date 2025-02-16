@@ -72,7 +72,7 @@
     top: 50vh; /* 画面の中央（縦方向） */
     left: 50%;
     transform: translate(-110%, -50%);
-    width: clamp(150px, 20vw, 200px); /* サイズ調整 */
+    /* width: clamp(150px, 20vw, 250px); サイズ調整 */
 }
 
 .pop {
