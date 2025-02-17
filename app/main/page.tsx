@@ -78,6 +78,7 @@ export default function Home() {
                         height={35}
                     />
                 </Link>
+                <Link href="/story">
                 <Image
                     className={styles.storybutton}
                     src="物語ボタン.svg"
@@ -85,6 +86,7 @@ export default function Home() {
                     width={50}
                     height={100}
                 />
+                </Link>
             </main>
         </div>
     );
