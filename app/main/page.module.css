@@ -103,7 +103,7 @@
     position: absolute;
     bottom: 5vw; /* 画面の高さを考慮して配置 */
     left: 5vw;  /* 左端に寄せる */
-    width: clamp(50px, 20vw, 160px); /* 画面サイズに応じて調整 */
+    width: clamp(50px, 15vw, 160px); /* 画面サイズに応じて調整 */
     height: auto;
 }
 
