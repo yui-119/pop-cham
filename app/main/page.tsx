@@ -78,6 +78,13 @@ export default function Home() {
                         height={35}
                     />
                 </Link>
+                <Image
+                    className={styles.storybutton}
+                    src="物語ボタン.svg"
+                    alt="物語ボタンの画像"
+                    width={50}
+                    height={100}
+                />
             </main>
         </div>
     );

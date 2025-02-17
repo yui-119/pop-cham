@@ -99,6 +99,14 @@
     width: clamp(120px, 15vw, 160px);
 }
 
+.storybutton {
+    position: absolute;
+    bottom: 5vw; /* 画面の高さを考慮して配置 */
+    left: 5vw;  /* 左端に寄せる */
+    width: clamp(50px, 30vw, 160px); /* 画面サイズに応じて調整 */
+    height: auto;
+}
+
 @media (max-width: 767px) { /* スマホ用 */
     .cham {
         transform: translate(-90%, -50%); /* 左寄せを調整 */
