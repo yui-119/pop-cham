@@ -1,0 +1,48 @@
+.main{
+    display: flex;
+    flex-direction: column;  /* PCでもスマホでも縦並び */
+    justify-content: flex-start; /* 縦方向の中央から上に寄せる */
+    align-items: center;     /* 横方向の中央配置 */
+    min-height: 100vh;       /* 画面全体の高さを占める */
+    text-align: center;
+}
+
+.h1{
+    position: absolute;
+    top: 30px;
+    font-size: clamp(1.4em, 3vw, 2.5em); /* サイズ調整 */
+}
+
+.h2{
+    position: absolute;
+    top: 230px;
+}
+
+.return{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.story{
+    position: absolute;
+    top: 300px; /* h2 の 230px + 余白 60px */
+    width: 90%; /* 画面幅に応じて調整 */
+    max-width: 400px; /* PCでの最大幅 */
+    left: 50%;
+    transform: translateX(-50%); /* 中央揃え */
+}
+
+.firststory{
+    width: 100%;
+    height: auto;
+    max-height: 70vh; /* 画面の高さの70%まで */
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .mediaContainer {
+        top: 270px; /* スマホでは少し上に */
+        max-width: 280px; /* スマホでは少し小さく */
+    }
+}
