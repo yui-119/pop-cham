@@ -2,6 +2,7 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import Header from "@/app/components/Header";
+import Link from 'next/link';
 
 export default function Home() {
     return (
@@ -52,13 +53,15 @@ export default function Home() {
                     width={250}
                     height={250}
                 />
-                <Image
-                    className={styles.button1}
-                    src="ちゃむボタン.svg"
-                    alt="ちゃむボタンの画像"
-                    width={142}
-                    height={35}
-                />
+                <Link href="/profile1">
+                    <Image
+                        className={styles.button1}
+                        src="ちゃむボタン.svg"
+                        alt="ちゃむボタンの画像"
+                        width={142}
+                        height={35}
+                    />
+                </Link>
                 <Image
                     className={styles.pop}
                     src="ぽっぷ.svg"
@@ -66,13 +69,15 @@ export default function Home() {
                     width={140}
                     height={161}
                 />
-                <Image
-                    className={styles.button2}
-                    src="ポップボタン.svg"
-                    alt="ポップボタンの画像"
-                    width={142}
-                    height={35}
-                />
+                <Link href="/profile2">
+                    <Image
+                        className={styles.button2}
+                        src="ポップボタン.svg"
+                        alt="ポップボタンの画像"
+                        width={142}
+                        height={35}
+                    />
+                </Link>
                 <Image
                     className={styles.storybutton}
                     src="物語ボタン.svg"

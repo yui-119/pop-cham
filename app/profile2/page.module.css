@@ -1,0 +1,59 @@
+.main{
+    display: flex;
+    flex-direction: column;  /* PCでもスマホでも縦並び */
+    justify-content: flex-start; /* 縦方向の中央から上に寄せる */
+    align-items: center;     /* 横方向の中央配置 */
+    min-height: 100vh;       /* 画面全体の高さを占める */
+    text-align: center;
+}
+
+.h1{
+    position: absolute;
+    top: 30px;
+    font-size: clamp(1.4em, 3vw, 2.5em); /* サイズ調整 */
+}
+
+.return{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.cham{
+    position: absolute;
+    top: 50vh; /* 画面の中央（縦方向） */
+    left: 50%;
+    transform: translate(-50%, 10%);
+    width: clamp(204px, 20vw, 300px); /* サイズ調整 */
+}
+
+.birth{
+    position: absolute;
+    top: 50vh; /* 画面の中央（縦方向） */
+    left: 50%;
+    transform: translate(10%, -250%);
+    width: clamp(100px, 20vw, 150px); /* サイズ調整 */
+}
+
+.pome{
+    position: absolute;
+    top: 50vh; /* 画面の中央（縦方向） */
+    left: 50%;
+    transform: translate(-150%, -150%);
+    width: clamp(120px, 20vw, 150px); /* サイズ調整 */
+}
+
+.seikaku{
+    position: absolute;
+    top: 50vh; /* 画面の中央（縦方向） */
+    left: 50%;
+    transform: translate(50%, -100%);
+    width: clamp(120px, 20vw, 150px); /* サイズ調整 */
+}
+
+.image-link {
+    display: flex;
+    justify-content: center; /* 横方向の中央寄せ */
+    /* align-items: center; 縦方向の中央寄せ */
+    margin-top: 650px; /* 画像の位置を下げる */
+  }
