@@ -84,7 +84,7 @@ export default function Home() {
                     src="物語ボタン.svg"
                     alt="物語ボタンの画像"
                     width={50}
-                    height={100}
+                    height={70}
                 />
                 </Link>
             </main>
