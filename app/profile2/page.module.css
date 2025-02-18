@@ -57,3 +57,11 @@
     /* align-items: center; 縦方向の中央寄せ */
     margin-top: 650px; /* 画像の位置を下げる */
   }
+
+.home{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: clamp(120px, 20vw, 230px); /* サイズ調整 */
+    height: auto;
+}
