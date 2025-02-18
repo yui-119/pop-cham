@@ -28,6 +28,15 @@ export default function Home() {
                 width={204}
                 height={193}
             />
+            <Link href="/popmotion">
+                <Image
+                    className={styles.home}
+                    src="ポップの部屋.svg"
+                    alt="ポップ部屋の画像"
+                    width={230}
+                    height={209}
+                />
+            </Link>
             <Image
                 className={styles.birth}
                 src="ポップ誕生日.svg"
