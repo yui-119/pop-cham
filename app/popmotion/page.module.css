@@ -38,3 +38,8 @@
     user-select: none;
     /* 画像選択を無効化 */
 }
+
+.otebutton{
+    position: absolute;
+    bottom: 10px;
+}

@@ -5,26 +5,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
-    const [isGif, setIsGif] = useState(false); // GIF表示を管理するstate
+    const [dogImage, setDogImage] = useState("ポップ最初.svg"); // 初期画像
+    const [isGif, setIsGif] = useState(false); // 撫でたときのGIF制御
 
-    const handleMouseEnter = () => {
-        // タッチで撫でたらGIFに切り替え
-        setIsGif(true);
-    };
+    const handleMouseEnter = () => setIsGif(true);
+    const handleMouseLeave = () => setIsGif(false);
+    const handleTouchStart = () => setIsGif(true);
+    const handleTouchEnd = () => setIsGif(false);
 
-    const handleTouchStart = () => {
-        // マウスで撫でたらGIFに切り替え
-        setIsGif(true);
-    };
-
-    const handleMouseLeave = () => {
-        // マウスが画像から離れたら元の画像に戻す
-        setIsGif(false);
-    };
-
-    const handleTouchEnd = () => {
-        // タッチが終わったら元の画像に戻す
-        setIsGif(false);
+    // ボタンをクリックすると新しいGIFに変更
+    const handleClick = () => {
+        setDogImage("/ポップお手.gif"); // 別のGIFに変更
+        setTimeout(() => {
+            setDogImage("ポップ最初.svg"); // 2秒後に元の画像に戻す
+        }, 1500);
     };
 
     return (
@@ -41,25 +35,35 @@ export default function Home() {
             <div className={styles.pop}>
                 {!isGif ? (
                     <Image
-                        className={styles.dogImage} // 画像クラス名
-                        src="ポップ最初.svg" // 画像パス
+                        className={styles.dogImage}
+                        src={dogImage} // クリック後のGIFも反映
                         alt="犬の画像"
-                        width={400}
-                        height={400}
-                        onMouseEnter={handleMouseEnter}  // マウスが画像に触れた時
-                        onTouchStart={handleTouchStart}  // タッチが始まった時
+                        width={300}
+                        height={300}
+                        onMouseEnter={handleMouseEnter}
+                        onTouchStart={handleTouchStart}
                     />
                 ) : (
                     <Image
-                        src="/ポップ撫でる.gif" // GIFファイルのパス
+                        src="/ポップ撫でる.gif"
                         alt="犬のアニメーション"
                         className={styles.dogGif}
-                        width={400}
-                        height={400}
-                        onMouseLeave={handleMouseLeave}  // マウスが画像から離れた時
-                        onTouchEnd={handleTouchEnd}  // タッチが終わった時
+                        width={300}
+                        height={300}
+                        onMouseLeave={handleMouseLeave}
+                        onTouchEnd={handleTouchEnd}
                     />
                 )}
+            </div>
+
+            {/* クリックすると特別なGIFに切り替わるボタン */}
+            <div onClick={handleClick} className={styles.otebutton}>
+                <Image
+                    src="お手ボタン.svg"
+                    alt="お手ボタン画像"
+                    width={60}
+                    height={60}
+                />
             </div>
         </main>
     );
